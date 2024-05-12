@@ -12,7 +12,6 @@
       <div class="product-display">
         <div class="product-container">
           <div class="product-image">
-            <!-- Используем директиву v-bind -->
             <img :src="image" :alt="product" />
           </div>
           <div class="product-info">
@@ -24,11 +23,16 @@
               Товар заканчивается
             </p>
             <p v-else>Товар закончился!</p>
+            <ul>
+              <li v-for="detail in details">{{ detail }}</li>
+            </ul>
+            <ul>
+              <li v-for="size in sizes" class="li-sizes">{{ size }}</li>
+            </ul>
           </div>
         </div>
       </div>
     </div>
-    <!-- Импорт главного скрипта и подключение приложения -->
     <script src="./main.js"></script>
   </body>
 </html>
