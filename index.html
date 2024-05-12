@@ -9,6 +9,7 @@
   <body>
     <div id="app">
       <div class="nav-bar"></div>
+      <div class="cart">Корзина: {{ cart }}</div>
       <div class="product-display">
         <div class="product-container">
           <div class="product-image">
@@ -29,6 +30,15 @@
             <ul>
               <li v-for="size in sizes" class="li-sizes">{{ size }}</li>
             </ul>
+            <div
+              v-for="variant in variants"
+              :key="variant.id"
+              @mouseover="updateImage(variant.image)"
+            >
+              {{ variant.color}}
+            </div>
+            <button class="button" @click="addToCart">В корзину</button>
+            <button class="button" @click="removeFromCart">Убрать</button>
           </div>
         </div>
       </div>

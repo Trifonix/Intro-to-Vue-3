@@ -6,7 +6,7 @@ body {
 }
 
 .button {
-  margin: 30px;
+  margin: 4px;
   background-color: #39495c;
   border-radius: 5px;
   font-size: 18px;
@@ -166,7 +166,6 @@ ul {
 
 .li-sizes {
   border: 1px solid #84cf6a;
-  padding: 10px;
 }
 
 @media only screen and (max-width: 600px) {
