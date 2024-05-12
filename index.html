@@ -18,6 +18,12 @@
           <div class="product-info">
             <h1>{{ product }}</h1>
             <a :href="url">{{ product }}</a>
+            <p v-show="onSale">Распродажа!!!</p>
+            <p v-if="inventory > 10">В наличии</p>
+            <p v-else-if="inventory > 0 && inventory <= 10">
+              Товар заканчивается
+            </p>
+            <p v-else>Товар закончился!</p>
           </div>
         </div>
       </div>
